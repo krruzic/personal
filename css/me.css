@@ -5,9 +5,10 @@
   --green: #90d42b;
   --blue: #82aaff;
 }
+a { color: inherit; }
 
 html {
-  background: url(/img/bg.jpg) no-repeat center center fixed;
+  background: url(../img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,7 +16,6 @@ html {
   display: grid;
   font-family: 'Roboto', sans-serif;
   color: var(--black);
-  overflow-y: hidden;
 }
 
 .card {
@@ -27,11 +27,11 @@ html {
   padding: 1%;
 }
 
-
 .header {
   display: flex;
   align-items: center; /* align vertical */
   /*justify-content: space-between;*/
+  margin-bottom: 0.8rem;
 }
 .social {
   display: inline-grid;
@@ -56,7 +56,16 @@ aside {
   text-indent: 1rem;
   font-style: italic;
 }
+h2.active {
+  text-decoration: underline;
+}
+h2.active:hover {
+  cursor: pointer;
+}
 
+.topics {
+  display: flex;
+}
 .info {
   margin: 0 2%;
 }
@@ -100,4 +109,174 @@ li::before {
   font-family: FontAwesome;
   padding-right: 0.4rem;
   color: var(--black);
+}
+
+section {
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+  display: none;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--black);
+  border: 1px solid transparent;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label[for*='1']:before {
+  content: '\f0b1';
+}
+
+label[for*='2']:before {
+  content: '\f109';
+}
+
+label[for*='3']:before {
+  content: '\f16b';
+}
+
+label[for*='4']:before {
+  content: '\f1a9';
+}
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + label {
+  border: 1px solid #ddd;
+  border-top: 2px solid var(--red);
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: auto auto;
+  grid-auto-rows: 6rem;
+  grid-auto-flow: row dense;
+  grid-template-areas:
+  "a a a b b b b"
+  "a a a b b b b"
+  "c c c b b b b"
+  "c c c b b b b"
+  "d d d d d d d";
+}
+.grid2 {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: auto auto;
+  grid-auto-rows: 6rem;
+  grid-auto-flow: row dense;
+  grid-template-areas:
+  "a a a b b b b"
+  "a a a b b b b"
+  "a a a b b b b"
+  "d d d d d d d";
+}
+
+.webdescription {
+  grid-area: d;
+  display: flex;
+  position: relative;
+  color: white;
+  justify-content: center;
+  height: 50%;
+  background:rgba(1,1,1,0.5);
+  padding: 0.5%;
+  align-items: center;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+.item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #0c9a9a;
+  color: #fff;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.item:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.3;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.item:hover:after {
+  opacity: 0;
+}
+.item--long {
+  grid-area: a;
+}
+.item--medium {
+  grid-area: c;
+}
+.item--large {
+  grid-area: b;
+}
+.item--full {
+  grid-column-end: auto;
+}
+@media screen and (min-width: 768px) {
+  .item--full {
+    grid-column: 1/-1;
+    grid-row-end: span 2;
+  }
+}
+.item__details {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  color: #444;
+  background: #fff;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  color: #828282;
+}
+.item__details:before {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-right: 0.5em;
+  color: #444;
 }

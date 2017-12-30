@@ -3,11 +3,14 @@
 <head>
   <title>Kristopher Ruzic - Software Developer</title>
   <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" type="text/css" href="../css/me.css">
   <script src="http://email.tl.fortawesome.com/c/eJxNjcsOgyAURL9GloR7QcUFC_vgP648qq3WBjBN-vWluyazmsw5440PnQ89WwwK6AFxgFZqRA58vFot5QnkeDmrzraNEmXlcU-F3iHvW-Bu39hslEOqqBc-dlMEoSmSA-2GyU-aULLVzKW8ciPHBm3NkUPVPP81tRVEISoJ1PJ7Zsk8Ujo-i6uvt42W9bf6AiFZNUQ"></script>
-
-  <link rel="stylesheet" type="text/css" href="/css/me.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous">
+  </script>
 </head>
 <body>
   <div class="card">
@@ -24,9 +27,18 @@
 "><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
         </div>
       </div>
-      <hr/>
-      <h2>Work Experience</h2>
-      <div class="info">
+      <input id="tab1" type="radio" name="tabs" checked>
+      <label for="tab1">Work</label>
+
+      <input id="tab2" type="radio" name="tabs">
+      <label for="tab2">Web</label>
+
+<!--       <input id="tab3" type="radio" name="tabs">
+      <label for="tab3">Projects</label>
+
+      <input id="tab4" type="radio" name="tabs">
+      <label for="tab4">Minecraft</label> -->
+      <section id="content1">
         <div class="jobheader">
           <h4><span class="employ">City of Calgary</span> | Summer 2017</h4>
           <span class="position">Software Intern</span>
@@ -48,8 +60,7 @@
         <div class="jobdetails">
           <aside>Part-time job working with Large Enterprise codebase using Javascript, JQuery and ASP</aside>
           <ul>
-            <li>Developed a multitude of online reports to expose database contents in a user-friendly way to sales
-and shipping teams</li>
+            <li>Developed a multitude of online reports to expose database contents in a user-friendly way to sales and shipping teams</li>
             <li>Helped design and plan future development based on requirements specified by end users</li>
             <li>Utilised HTML5, CSS3 and other modern standards to implement new and useful features in existing codebase</li>
           </ul>
@@ -67,9 +78,102 @@ and shipping teams</li>
             <li>Daily exposure and usage of ERP, to manage and work on projects using web-based text editors and other development tools</li>
           </ul>
         </div>
-      </div>
-    </div>
+      </section>
+      <section id="content2">
+        <div class="site">
+          <div class="webheader">
+            <a href="https://kcheques.krruzic.xyz"><h2>Kcheques</h2></a>
+          </div>
+          <div class="grid">
+            <div class="item item--long" style="background-image: url('../img/kcheques1.png')"></div>
+            <div class="item item--large" style="background-image: url('../img/kcheques2.png')"></div>
+            <div class="item item--medium" style="background-image: url('../img/kcheques3.png')"></div>
+            <div class="webdescription">KCheques is a simple Rails app that allows you to mock up fake cheques easily</div>
+          </div>
+        </div>
+        <div class="site2">
+          <div class="webheader">
+            <a href="https://calgarymanners.club"><h2>Calgary Manners Club</h2></a>
+          </div>
+          <div class="grid2">
+            <div class="item item--long" style="background-image: url('../img/cmc1.png')"></div>
+            <div class="item item--large" style="background-image: url('../img/cmc2.png')"></div>
+            <div class="webdescription">A prank website I made as a Christmas gift</div>
+          </div>
+        </div>
+        <div class="site2">
+          <div class="webheader">
+            <a href="https://xkcd.krruzic.xyz"><h2>Anti-XKCD Blog</h2></a>
+          </div>
+          <div class="grid2">
+            <div class="item item--long" style="background-image: url('../img/xkcd1.png')"></div>
+            <div class="item item--large" style="background-image: url('../img/xkcd2.png')"></div>
+            <div class="webdescription">Flask app serving bad reviews of XKCD (note: I still love the comic!)</div>
+          </div>
+        </div>
+      </section>
+<!--       <section id="content3">
+        <div class="jobheader">
+          <h4><span class="employ">City of Calgary</span> | Summer 2017</h4>
+        </div>
+        <div class="jobdetails">
+          <aside>Internship with the Cloud and Open Source team within the City of Calgary</aside>
+          <ul>
+            <li>Helped write specifications for OSS analysis and deployment</li>
+            <li>Assisted in the design of a large scale IOT infrastructure</li>
+            <li>Developed, tested and deployed IOT applications on CloudFoundry</li>
+            <li>Assessed and evaluated cloud and open source procurements for use within the City</li>
+            <li>Researched and tested private blockchains for corporate use based on Ethereum</li>
+          </ul>
+        </div>
+        <div class="jobheader">
+          <h4><span class="employ">MRO Electronic Supply</span> | October 2016 to May 2017</h4>
+          <span class="position">Junior Software Developer</span>
+        </div>
+        <div class="jobdetails">
+          <aside>Part-time job working with Large Enterprise codebase using Javascript, JQuery and ASP</aside>
+          <ul>
+            <li>Developed a multitude of online reports to expose database contents in a user-friendly way to sales and shipping teams</li>
+            <li>Helped design and plan future development based on requirements specified by end users</li>
+            <li>Utilised HTML5, CSS3 and other modern standards to implement new and useful features in existing codebase</li>
+          </ul>
+        </div>
+        <div class="jobheader">
+          <h4><span class="employ">Nexedi SA</span> | May to November 2015</h4>
+          <span class="position">Software Intern</span>
+        </div>
+        <div class="jobdetails">
+          <aside>Six month internship working with an ERP system using Python and JavaScript</aside>
+          <ul>
+            <li>Developed simple method to deploy and install ERP system loaded with a big data framework for working on large information sets using Ansible Playbooks</li>
+            <li>Created "Developer Terminal" for exploring the HATEOAS API on the ERP install to facilitate learning it quicker and to enable developers to build webapps of the API responses</li>
+            <li>Worked with and built extensions to the existing ERP, adding functionality using available tools and workflows</li>
+            <li>Daily exposure and usage of ERP, to manage and work on projects using web-based text editors and other development tools</li>
+          </ul>
+        </div>
+      </section>
+      <section id="content4">
+        <div class="webheader">
+          <h4><span class="employ">City of Calgary</span> | Summer 2017</h4>
+          <span class="position">Software Intern</span>
+        </div>
+        <div class="screenshots"></div>
+        <div class="webdescription"></div>
+        <div class="webheader">
+          <h4><span class="employ">City of Calgary</span> | Summer 2017</h4>
+          <span class="position">Software Intern</span>
+        </div>
+        <div class="screenshots"></div>
+        <div class="webdescription"></div>
+        <div class="webheader">
+          <h4><span class="employ">City of Calgary</span> | Summer 2017</h4>
+          <span class="position">Software Intern</span>
+        </div>
+        <div class="screenshots"></div>
+        <div class="webdescription"></div>
+      </section>
+ -->    </div>
   </div>
-  <script type="text/javascript" src="https://use.fontawesome.com/0aaef431a5.js"></script>
 </body>
+
 </html>
