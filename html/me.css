@@ -1,0 +1,103 @@
+:root {
+  --black: #263238;
+  --grey: #616161;
+  --red: #f07178;
+  --green: #90d42b;
+  --blue: #82aaff;
+}
+
+html {
+  background: url(bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: grid;
+  font-family: 'Roboto', sans-serif;
+  color: var(--black);
+  overflow-y: hidden;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin: 5% 20%;
+  padding: 1%;
+}
+
+
+.header {
+  display: flex;
+  align-items: center; /* align vertical */
+  /*justify-content: space-between;*/
+}
+.social {
+  display: inline-grid;
+}
+.social a {
+  color: var(--black);
+}
+h1 {
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h1,h2,h3,h4 {
+  margin: 0.5rem 0;
+}
+h4 {
+  color: var(--black);
+}
+aside {
+  color: var(--grey);
+  text-indent: 1rem;
+  font-style: italic;
+}
+
+.info {
+  margin: 0 2%;
+}
+.employ {
+  color: var(--blue);
+}
+
+.portrait {
+  border-radius: 50%;
+  width: 8rem;
+  margin-right: 1rem;
+}
+
+.hilight {
+  color: var(--red);
+}
+.jobheader {
+  display: flex;
+  align-items: center; /* align vertical */
+  justify-content: space-between;
+}
+.position {
+  color: var(--green);
+  font-style: italic;
+  margin: 0.1rem;
+}
+.position::before {
+  content: "\f007";
+  font-family: FontAwesome;
+  padding-right: 0.4rem;
+}
+ul {
+  margin: 0.5rem;
+}
+li{
+  list-style-type: none;
+}
+
+li::before {
+  content: "\f192";
+  font-family: FontAwesome;
+  padding-right: 0.4rem;
+  color: var(--black);
+}
